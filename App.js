@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 //import BlackButton from './Button'; // Importando o componente Button (mexer depois)
 
 export default function App() {
-
+//oi
   return (
     <View style={styles.container}>
       <Text style={styles.Texto}>Bem-vindo ao De Rolé</Text>
