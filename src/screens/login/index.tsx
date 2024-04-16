@@ -1,9 +1,10 @@
 import React from 'react'
 import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
+import { Text, View, Image, TouchableOpacity } from 'react-native'
+import { styles } from './styles'
 //import BlackButton from './Button'; // Importando o componente Button (mexer depois)
 
-export default function App() {
+const Login = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.Texto}>Bem-vindo ao De Rolé</Text>
@@ -11,7 +12,7 @@ export default function App() {
       <Text style={styles.Texto2}>Há muito a ser explorado. Vamos lá!</Text>
 
       <Image
-        source={require('../AppProject/assets/logo.png')}
+        source={require('../../../assets/logo.png')}
         style={styles.backgroundImage}
       />
 
@@ -30,41 +31,4 @@ export default function App() {
   )
 }
 
-const styles = StyleSheet.create({
-  Texto: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    textAlign: 'left',
-    top: -300,
-  },
-
-  Texto2: {
-    fontSize: 15,
-    textAlign: 'center',
-    top: -275,
-    left: '1%',
-  },
-
-  Texto3: {
-    fontSize: 10,
-    textAlign: 'center',
-    top: 150,
-    left: '2%',
-  },
-
-  container: {
-    flex: 1,
-    backgroundColor: '#FFFF',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  backgroundImage: {
-    position: 'absolute',
-    top: '20%',
-    left: '23%',
-    width: '60%',
-    height: '40%',
-    transform: [{ translateX: 0 }, { translateY: 55 }],
-  },
-})
+export default Login
