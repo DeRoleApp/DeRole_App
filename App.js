@@ -1,10 +1,9 @@
-import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import React from 'react'
+import { StatusBar } from 'expo-status-bar'
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 //import BlackButton from './Button'; // Importando o componente Button (mexer depois)
 
 export default function App() {
-//oi
   return (
     <View style={styles.container}>
       <Text style={styles.Texto}>Bem-vindo ao De Rolé</Text>
@@ -20,7 +19,7 @@ export default function App() {
         Eu concordo com os Termos de Serviço da De Rolé e {'\n'}
         confirmo que li a Política de Privacidade De Rolé.
       </Text>
-      
+
       {/* Para adc os botões, dps precisa configurar pelo arquivo "buttons.js"
       <BlackButton onPress={() => {}} title="Continue com Google" />
       <BlackButton onPress={() => {}} title="Fazer Login" />
@@ -28,7 +27,7 @@ export default function App() {
 
       <StatusBar style="auto" />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -62,13 +61,10 @@ const styles = StyleSheet.create({
 
   backgroundImage: {
     position: 'absolute',
-    top: '20%', 
-    left: '23%', 
-    width: '60%', 
-    height: '40%', 
-    transform: [
-      { translateX: 0}, 
-      { translateY: 55}, 
-    ],
+    top: '20%',
+    left: '23%',
+    width: '60%',
+    height: '40%',
+    transform: [{ translateX: 0 }, { translateY: 55 }],
   },
-});
+})
