@@ -1,2 +1,1 @@
-export { default } from '../src/screens/login'
-
+export { default } from '../src/screens/home'

@@ -1,40 +1,70 @@
 import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
-  Texto: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    textAlign: 'left',
-    top: -300,
+  Container: {
+    width: '100%',
+    height: '100%',
+    backgroundColor: '#000',
   },
-
-  Texto2: {
-    fontSize: 15,
-    textAlign: 'center',
-    top: -275,
-    left: '1%',
-  },
-
-  Texto3: {
-    fontSize: 10,
-    textAlign: 'center',
-    top: 150,
-    left: '2%',
-  },
-
-  container: {
-    flex: 1,
-    backgroundColor: '#FFFF',
-    alignItems: 'center',
+  Content: {
+    padding: 30,
+    display: 'flex',
+    flexDirection: 'column',
     justifyContent: 'center',
+    alignItems: 'center',
+  },
+  Logo: {
+    height: 53,
+    width: 230,
+    marginBottom: 40,
+  },
+  TextWhite: {
+    color: '#fff',
+  },
+  Title: {
+    fontSize: 25,
+  },
+  InputsContainer: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    marginBottom: 40,
+  },
+  Input: {
+    height: 45,
+    width: '100%',
+    borderColor: '#fff',
+    borderWidth: 1,
+    color: '#fff',
+    marginTop: 20,
+    borderRadius: 5,
+    padding: 10,
+  },
+  ErrorMessage: { color: '#ff1313', marginTop: 10 },
+  OptionsContainer: {
+    width: '100%',
   },
 
-  backgroundImage: {
-    position: 'absolute',
-    top: '20%',
-    left: '23%',
-    width: '60%',
-    height: '40%',
-    transform: [{ translateX: 0 }, { translateY: 55 }],
+  TextAqua: {
+    color: '#00B2FF',
+  },
+  SignUpContent: {
+    display: 'flex',
+    flexDirection: 'row',
+    marginTop: 10,
+  },
+  Button: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    backgroundColor: '#fff',
+    marginTop: 40,
+    borderRadius: 5,
+    padding: 10,
+  },
+  ButtonText: {
+    fontSize: 20,
+    fontWeight: 'bold',
   },
 })
