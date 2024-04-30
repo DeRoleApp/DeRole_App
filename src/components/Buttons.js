@@ -1,27 +1,22 @@
+import React from "react";
+import { StyleSheet, Text, TouchableHighlight, TouchableOpacity, View } from "react-native";
 
-// import React from 'react';
-// import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+const Button= ({ text, onPress}) => {
+    return (
+            <TouchableOpacity onPress ={onPress}>
+                <Text style={styles.text}>{text}</Text>
+               
+            </TouchableOpacity>    
+    )
+ }
 
-// const BlackButton = ({ onPress, title }) => {
-//   return (
-//     <TouchableOpacity onPress={onPress} style={styles.button}>
-//       <Text style={styles.buttonText}>{title}</Text>
-//     </TouchableOpacity>
-//   );
-// };
+export default Button
 
-// const styles = StyleSheet.create({
-//   button: {
-//     backgroundColor: 'black',
-//     padding: 15,
-//     borderRadius: 8,
-//     alignItems: 'center',
-//   },
-//   buttonText: {
-//     color: 'white',
-//     fontSize: 18,
-//     fontWeight: 'bold',
-//   },
-// });
+const styles = StyleSheet.create({
 
-// export default BlackButton;
+    text:{
+    fontWeight: 'bold',
+    textAlign: 'center',
+},
+
+})
