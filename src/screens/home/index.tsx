@@ -1,10 +1,11 @@
 import React from 'react'
 import { StatusBar } from 'expo-status-bar'
 import { Text, View, Image } from 'react-native'
-import Button from '../../components/Buttons'
+import Button from '../../components/button'
 import { styles } from './styles'
+import { router } from 'expo-router'
 
-export default function App() {
+const Home = () => {
   const handleApplePress = () => {
     alert('Entrando com Apple')
   }
@@ -14,12 +15,13 @@ export default function App() {
   }
 
   const handleEntrarPress = () => {
-    alert('Entrando')
+    router.push('/login')
   }
 
   const handleCriarPress = () => {
     alert('Criando Conta')
   }
+
   const handleContinuarPress = () => {
     alert('Continuar sem Login')
   }
@@ -27,7 +29,6 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.continuar} onPress={handleContinuarPress}>
-        {' '}
         Continuar sem login
       </Text>
 
@@ -36,21 +37,26 @@ export default function App() {
       <Text style={styles.Texto2}>Há muito a ser explorado. Vamos lá?</Text>
 
       <Image
-        source={require('/Users/mariacmpv/DeRole_App/assets/logo.png')}
+        source={require('../../../assets/logo.png')}
         style={styles.backgroundImage}
       />
 
       <Text style={styles.Texto3}>Como deseja continuar?</Text>
 
       <View>
-        <View style={styles.apple}>
-          <Button text="Continuar com Apple" onPress={handleApplePress} />
-        </View>
+        <Button
+          style={styles.socialButton}
+          activeOpacity={0.5}
+          text="Continuar com Apple"
+          onPress={handleApplePress}
+        />
 
-        <View style={styles.google}>
-          <Button text="Continuar com Google" onPress={handleGooglePress} />
-          {/* <AntDesign name="google" size={24} color="black" /> */}
-        </View>
+        <Button
+          style={styles.socialButton}
+          activeOpacity={0.5}
+          text="Continuar com Google"
+          onPress={handleGooglePress}
+        />
       </View>
 
       <View style={styles.linhaContainer}>
@@ -60,16 +66,24 @@ export default function App() {
       </View>
 
       <View style={styles.buttonContainer}>
-        <View style={styles.button}>
-          <Button text="Entrar" onPress={handleEntrarPress} />
-        </View>
+        <Button
+          style={styles.button}
+          activeOpacity={0.5}
+          text="Entrar"
+          onPress={handleEntrarPress}
+        />
 
-        <View style={styles.button}>
-          <Button text="Criar Conta" onPress={handleCriarPress} />
-        </View>
+        <Button
+          style={styles.button}
+          activeOpacity={0.5}
+          text="Criar Conta"
+          onPress={handleCriarPress}
+        />
       </View>
 
       <StatusBar style="auto" />
     </View>
   )
 }
+
+export default Home

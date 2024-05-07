@@ -4,11 +4,12 @@ import {
   Image,
   StatusBar,
   Alert,
-  TouchableHighlight,
+  TouchableOpacity,
 } from 'react-native'
 import { styles } from './styles'
 import { useForm } from 'react-hook-form'
-import Input from '../../components/input/input'
+import Input from '../../components/input'
+import Button from '../../components/button'
 
 type SubmitDataProps = { email: string; password: string }
 const Login = () => {
@@ -59,31 +60,29 @@ const Login = () => {
           )}
         </View>
         <View style={styles.OptionsContainer}>
-          <TouchableHighlight
+          <TouchableOpacity
             activeOpacity={0.5}
             onPress={() =>
               Alert.alert('redirect para tela de recuperaçao de senha')
             }
           >
             <Text style={styles.TextAqua}>Esqueci minha senha</Text>
-          </TouchableHighlight>
+          </TouchableOpacity>
           <View style={styles.SignUpContent}>
             <Text style={styles.TextWhite}>Não possui uma conta - </Text>
-            <TouchableHighlight
+            <TouchableOpacity
               activeOpacity={0.5}
               onPress={() => Alert.alert('redirect para tela de registro')}
             >
               <Text style={styles.TextAqua}>Criar uma conta</Text>
-            </TouchableHighlight>
+            </TouchableOpacity>
           </View>
-          <TouchableHighlight
+          <Button
             onPress={handleSubmit(onSubmit)}
             style={styles.Button}
-            underlayColor={'#ffffffce'}
             activeOpacity={0.5}
-          >
-            <Text style={styles.ButtonText}>Entrar</Text>
-          </TouchableHighlight>
+            text="Entrar"
+          />
         </View>
       </View>
     </View>
