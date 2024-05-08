@@ -44,18 +44,7 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
     top: -150,
   },
-
-  apple: {
-    backgroundColor: '#FFFF',
-    width: 320,
-    height: 43,
-    top: -100,
-    marginBottom: 10,
-    alignContent: 'center',
-    borderRadius: 10,
-  },
-
-  google: {
+  socialButton: {
     backgroundColor: '#FFFF',
     width: 320,
     height: 43,
