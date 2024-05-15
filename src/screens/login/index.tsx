@@ -1,17 +1,12 @@
-import {
-  Text,
-  View,
-  Image,
-  StatusBar,
-  Alert,
-  TouchableOpacity,
-} from 'react-native'
+import { Text, View, StatusBar, Alert, TouchableOpacity } from 'react-native'
 import { styles } from './styles'
 import { useForm } from 'react-hook-form'
 import Input from '../../components/input'
 import Button from '../../components/button'
+import LoginHeader from '../../components/header/login-header'
 
 type SubmitDataProps = { email: string; password: string }
+
 const Login = () => {
   const {
     control,
@@ -28,11 +23,8 @@ const Login = () => {
   return (
     <View style={styles.Container}>
       <StatusBar barStyle="light-content" />
+      <LoginHeader />
       <View style={styles.Content}>
-        <Image
-          source={require('../../../assets/logo-horizontal.webp')}
-          style={styles.Logo}
-        />
         <Text style={[styles.TextWhite, styles.Title]}>Entrando</Text>
         <View style={styles.InputsContainer}>
           <Input

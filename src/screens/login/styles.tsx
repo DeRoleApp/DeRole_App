@@ -5,18 +5,13 @@ export const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     backgroundColor: '#000',
+    padding: 30,
   },
   Content: {
-    padding: 30,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  Logo: {
-    height: 53,
-    width: 230,
-    marginBottom: 40,
   },
   TextWhite: {
     color: '#fff',
