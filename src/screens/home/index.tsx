@@ -1,6 +1,5 @@
 import React from 'react'
-import { StatusBar } from 'expo-status-bar'
-import { Text, View, Image } from 'react-native'
+import { Text, View, Image, StatusBar } from 'react-native'
 import Button from '../../components/button'
 import { styles } from './styles'
 import { router } from 'expo-router'
@@ -28,6 +27,8 @@ const Home = () => {
 
   return (
     <View style={styles.container}>
+      <StatusBar barStyle="light-content" />
+
       <Text style={styles.continuar} onPress={handleContinuarPress}>
         Continuar sem login
       </Text>
@@ -80,8 +81,6 @@ const Home = () => {
           onPress={handleCriarPress}
         />
       </View>
-
-      <StatusBar style="auto" />
     </View>
   )
 }
