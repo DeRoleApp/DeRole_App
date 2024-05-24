@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text, View, Image, StatusBar } from 'react-native'
-import Button from '../../components/button'
+import Button from '@Components/button'
 import { styles } from './styles'
 import { router } from 'expo-router'
 
