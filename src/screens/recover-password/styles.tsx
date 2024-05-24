@@ -12,21 +12,21 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  TextWhite: {
-    color: '#fff',
-  },
   Title: {
+    color: '#fff',
     fontSize: 25,
   },
+  Text: {
+    color: '#fff'
+    },
+    complementTextContainer: { marginTop: 20 },
+    ComplementTextContent: {display:'flex', flexDirection: 'row'},
+  ResendCode:{ color: '#00B2FF', marginTop: 1 },
   InputsContainer: {
     width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 40,
   },
   Input: {
     height: 45,
-    width: '100%',
     borderColor: '#fff',
     borderWidth: 1,
     color: '#fff',
@@ -41,11 +41,6 @@ export const styles = StyleSheet.create({
 
   TextAqua: {
     color: '#00B2FF',
-  },
-  SignUpContent: {
-    display: 'flex',
-    flexDirection: 'row',
-    marginTop: 10,
   },
   Button: {
     width: '100%',
