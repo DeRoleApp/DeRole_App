@@ -1,5 +1,5 @@
 import { Slot } from 'expo-router'
-import { SafeAreaView } from 'react-native'
+import { SafeAreaView, View } from 'react-native'
 
 const RootLayout = () => {
   return (
@@ -9,7 +9,9 @@ const RootLayout = () => {
         backgroundColor: '#000',
       }}
     >
-      <Slot />
+      <View style={{ padding: 30 }}>
+        <Slot />
+      </View>
     </SafeAreaView>
   )
 }

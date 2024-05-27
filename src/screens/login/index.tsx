@@ -1,9 +1,10 @@
 import { Text, View, StatusBar, Alert, TouchableOpacity } from 'react-native'
 import { styles } from './styles'
 import { useForm } from 'react-hook-form'
-import Input from '../../components/input'
-import Button from '../../components/button'
-import LoginHeader from '../../components/header/login-header'
+import Input from '@Components/input'
+import Button from '@Components/button'
+import LoginHeader from '@Components/header/login-header'
+import { router } from 'expo-router'
 
 type SubmitDataProps = { email: string; password: string }
 
@@ -25,7 +26,7 @@ const Login = () => {
       <StatusBar barStyle="light-content" />
       <LoginHeader />
       <View style={styles.Content}>
-        <Text style={[styles.TextWhite, styles.Title]}>Entrando</Text>
+        <Text style={[styles.TextWhite, styles.Title]}>Login</Text>
         <View style={styles.InputsContainer}>
           <Input
             name={'email'}
@@ -54,9 +55,7 @@ const Login = () => {
         <View style={styles.OptionsContainer}>
           <TouchableOpacity
             activeOpacity={0.5}
-            onPress={() =>
-              Alert.alert('redirect para tela de recuperaçao de senha')
-            }
+            onPress={() => router.push('/recover-password')}
           >
             <Text style={styles.TextAqua}>Esqueci minha senha</Text>
           </TouchableOpacity>
