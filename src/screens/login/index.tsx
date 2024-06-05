@@ -5,8 +5,12 @@ import Input from '@Components/input'
 import Button from '@Components/button'
 import LoginHeader from '@Components/header/login-header'
 import { router } from 'expo-router'
+import ErrorMessage from '@Components/error-message'
 
-type SubmitDataProps = { email: string; password: string }
+type SubmitDataProps = {
+  email: string
+  password: string
+}
 
 const Login = () => {
   const {
@@ -36,9 +40,7 @@ const Login = () => {
             style={styles.Input}
             rules={{ required: true }}
           />
-          {Boolean(errors?.email?.type === 'required') && (
-            <Text style={styles.ErrorMessage}>*Email Obrigatório</Text>
-          )}
+          <ErrorMessage error={errors.email} />
           <Input
             name={'password'}
             placeholder="Senha"
@@ -48,9 +50,7 @@ const Login = () => {
             secureTextEntry
             rules={{ required: true }}
           />
-          {Boolean(errors?.password?.type === 'required') && (
-            <Text style={styles.ErrorMessage}>*Senha Obrigatória</Text>
-          )}
+          <ErrorMessage error={errors.password} />
         </View>
         <View style={styles.OptionsContainer}>
           <TouchableOpacity

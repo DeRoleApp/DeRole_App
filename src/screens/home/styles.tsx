@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native'
 
+//TODO: change style names to english
 export const styles = StyleSheet.create({
   container: {
     backgroundColor: '#000000',
@@ -7,7 +8,6 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: 10,
   },
-
   continuar: {
     fontSize: 16,
     color: '#0097D9',
@@ -21,14 +21,12 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 10,
   },
-
   Texto2: {
     fontSize: 16,
     color: '#FFFF',
     textAlign: 'center',
     marginBottom: 200,
   },
-
   Texto3: {
     fontSize: 13,
     textAlign: 'center',
@@ -37,7 +35,6 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
     top: -100,
   },
-
   backgroundImage: {
     width: 138,
     height: 200,
@@ -54,14 +51,12 @@ export const styles = StyleSheet.create({
     alignContent: 'center',
     borderRadius: 10,
   },
-
   buttonContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: 320,
     height: 43,
   },
-
   button: {
     flex: 1,
     marginHorizontal: 5,
@@ -70,21 +65,18 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     top: -70,
   },
-
   linhaContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignContent: 'center',
     width: '80%',
   },
-
   linha: {
     flex: 1,
     height: 1,
     backgroundColor: '#C0C0C0',
     bottom: 80,
   },
-
   ou: {
     color: '#FFFF',
     marginHorizontal: 10,

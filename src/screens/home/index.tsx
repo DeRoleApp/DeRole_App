@@ -28,22 +28,16 @@ const Home = () => {
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" />
-
       <Text style={styles.continuar} onPress={handleContinuarPress}>
         Continuar sem login
       </Text>
-
       <Text style={styles.Texto}>Bem-vindo ao De Rolé</Text>
-
       <Text style={styles.Texto2}>Há muito a ser explorado. Vamos lá?</Text>
-
       <Image
         source={require('../../../assets/logo.png')}
         style={styles.backgroundImage}
       />
-
       <Text style={styles.Texto3}>Como deseja continuar?</Text>
-
       <View>
         <Button
           style={styles.socialButton}
@@ -51,7 +45,6 @@ const Home = () => {
           text="Continuar com Apple"
           onPress={handleApplePress}
         />
-
         <Button
           style={styles.socialButton}
           activeOpacity={0.5}
@@ -59,13 +52,11 @@ const Home = () => {
           onPress={handleGooglePress}
         />
       </View>
-
       <View style={styles.linhaContainer}>
         <View style={styles.linha}></View>
         <Text style={styles.ou}>ou</Text>
         <View style={styles.linha}></View>
       </View>
-
       <View style={styles.buttonContainer}>
         <Button
           style={styles.button}
@@ -73,7 +64,6 @@ const Home = () => {
           text="Entrar"
           onPress={handleEntrarPress}
         />
-
         <Button
           style={styles.button}
           activeOpacity={0.5}
