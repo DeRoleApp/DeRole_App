@@ -16,6 +16,12 @@ export type StepProps = {
 
 type Step = 'accountVerify' | 'codeVerify' | 'createNewPassword'
 
+const buttonTitle = {
+  accountVerify: 'Enviar',
+  codeVerify: 'Verificar',
+  createNewPassword: 'Redefinir',
+} as const
+
 const RecoverPassword = () => {
   const {
     control,
@@ -55,7 +61,7 @@ const RecoverPassword = () => {
           onPress={handleSubmit(onSubmit)}
           style={styles.Button}
           activeOpacity={0.5}
-          text="Entrar"
+          text={buttonTitle[step]}
         />
       </View>
     </View>
