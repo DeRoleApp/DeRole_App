@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native'
 import Input from '@Components/input'
-import { EmailAndPhoneRegex } from  '@Shared/helpers'
+import { EmailAndPhoneRegex } from '@Shared/helpers'
 import { styles } from '../../styles'
 import { StepProps } from '../..'
 

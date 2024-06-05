@@ -16,12 +16,22 @@ export const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 25,
   },
+  SubTitle: {
+    color: '#fff',
+    fontSize: 16,
+    marginTop: 20,
+  },
+  SubTitleContainerCentralized: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
   Text: {
-    color: '#fff'
-    },
-    complementTextContainer: { marginTop: 20 },
-    ComplementTextContent: {display:'flex', flexDirection: 'row'},
-  ResendCode:{ color: '#00B2FF', marginTop: 1 },
+    color: '#fff',
+  },
+  complementTextContainer: { marginTop: 20 },
+  ComplementTextContent: { display: 'flex', flexDirection: 'row' },
+  ResendCode: { color: '#00B2FF', marginTop: 1 },
   InputsContainer: {
     width: '100%',
   },
@@ -38,7 +48,6 @@ export const styles = StyleSheet.create({
   OptionsContainer: {
     width: '100%',
   },
-
   TextAqua: {
     color: '#00B2FF',
   },
