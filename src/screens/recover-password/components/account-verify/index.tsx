@@ -1,8 +1,9 @@
 import { View, Text } from 'react-native'
 import Input from '@Components/input'
-import { EmailAndPhoneRegex } from  '@Shared/helpers'
+import { EmailAndPhoneRegex } from '@Shared/helpers'
 import { styles } from '../../styles'
 import { StepProps } from '../..'
+import ErrorMessage from '@Components/error-message'
 
 const AccountVerify = ({ control, errors }: StepProps) => {
   return (
@@ -14,20 +15,14 @@ const AccountVerify = ({ control, errors }: StepProps) => {
         control={control}
         style={styles.Input}
         rules={{
-          required: true,
+          required: { value: true, message: '*Campo Obrigatório' },
           pattern: {
             value: EmailAndPhoneRegex,
             message: 'Formato inválido. Deve ser um email ou telefone.',
           },
         }}
       />
-      {Boolean(errors) && Boolean(errors?.account?.type === 'required') ? (
-        <Text style={styles.ErrorMessage}>*Campo Obrigatório</Text>
-      ) : (
-        <Text style={styles.ErrorMessage}>
-          {errors?.account?.message as string}
-        </Text>
-      )}
+      <ErrorMessage error={errors.account} />
     </View>
   )
 }

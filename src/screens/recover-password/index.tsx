@@ -7,6 +7,7 @@ import { useState } from 'react'
 import { router } from 'expo-router'
 import AccountVerify from './components/account-verify'
 import CodeVerify from './components/code-verify'
+import CreatePassword from './components/create-password'
 
 export type StepProps = {
   control: Control
@@ -14,6 +15,12 @@ export type StepProps = {
 }
 
 type Step = 'accountVerify' | 'codeVerify' | 'createNewPassword'
+
+const buttonTitle = {
+  accountVerify: 'Enviar',
+  codeVerify: 'Verificar',
+  createNewPassword: 'Redefinir',
+} as const
 
 const RecoverPassword = () => {
   const {
@@ -25,7 +32,9 @@ const RecoverPassword = () => {
   const [step, setStep] = useState<Step>('accountVerify')
 
   const onSubmit = (data) => {
-    const { account, MFACode } = data
+    const { account, MFACode, newPassword, newPasswordConfirmation } = data
+
+    console.log(data)
 
     step === 'accountVerify'
       ? setStep('codeVerify')
@@ -40,18 +49,19 @@ const RecoverPassword = () => {
       <LoginHeader />
       <View style={styles.Content}>
         <Text style={styles.Title}>Redefinir senha</Text>
+
         {step === 'accountVerify' ? (
           <AccountVerify control={control} errors={errors} />
         ) : step === 'codeVerify' ? (
           <CodeVerify control={control} errors={errors} />
         ) : (
-          <Text style={styles.Text}>generate new password component</Text>
+          <CreatePassword control={control} errors={errors} />
         )}
         <Button
           onPress={handleSubmit(onSubmit)}
           style={styles.Button}
           activeOpacity={0.5}
-          text="Entrar"
+          text={buttonTitle[step]}
         />
       </View>
     </View>

@@ -34,7 +34,6 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
   },
-  ErrorMessage: { color: '#ff1313', marginTop: 10 },
   OptionsContainer: {
     width: '100%',
   },
